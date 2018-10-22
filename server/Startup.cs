@@ -13,7 +13,7 @@ using Microsoft.Extensions.Options;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 
-namespace dotnet_core_aad
+namespace MyApp
 {
     public class Startup
     {
