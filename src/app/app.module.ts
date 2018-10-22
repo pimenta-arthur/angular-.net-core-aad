@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatToolbarModule, MatButtonModule } from '@angular/material';
+import { AdalService } from 'adal-angular4';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,7 @@ import { MatToolbarModule, MatButtonModule } from '@angular/material';
     BrowserAnimationsModule,
     MatToolbarModule, MatButtonModule
   ],
-  providers: [],
+  providers: [AdalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
