@@ -1,22 +1,49 @@
-#Client application
-The Cliente application authenticate Angular 5 applications to Azure Active Directory using the adal-angular5 package (https://www.npmjs.com/package/adal-angular5)
-This project is built to run using the Angular CLI's ng serve this command will launch the site at https://localhost:4200 [note: this is a reply URL] with hot reload.
+# Angular 5 / ASP.NET Core Web API 2.1 / Azure AD / ADAL
 
-Note we set the AD tenant/client IDs of angular2-adal-example (https://portal.azure.com/#@wabtec.com/blade/Microsoft_AAD_IAM/ApplicationBlade/appId/3b28d4ef-380c-4fae-9855-dd218f7190be/objectId/613b9fe7-8c0f-4452-8c09-77cb4c56605e)
+Angular 5 app for sign in and sign out with Azure AD and call protected WebAPI
 
-# Getting Started
-1.	Clone the repo
-2.	Run  `npm install`
-3.  Run  `ng serve`
+![angular net core azure ad](https://user-images.githubusercontent.com/17882425/50456229-28df8080-093a-11e9-8418-74594ae3f5dc.png)
 
-## Build
+## Getting Started
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+### Requirements
 
-## Running unit tests
+Make sure you have installed all of the following prerequisites on your development machine:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Install [Node.js](https://nodejs.org/en/) and the npm package manager
+2. Install [.NET Core 2.1](https://www.microsoft.com/net/download)
+3. Install the Angular CLI
 
-## Running end-to-end tests
+    ```bash
+    npm install -g @angular/cli
+    ```
+    
+4. Install the Concurrently package
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+    ```bash
+    npm install -g concurrently
+    ```
+
+### Installation
+1. Clone this repository
+
+    ```bash
+    git clone https://github.com/pimenta-arthur/angular-asp.net-core-aad.git
+    cd angular-asp.net-core-aad
+    ```
+
+1. Install the npm packages
+
+    ```bash
+    npm install
+    ```
+
+### Running the app
+
+1. Build and launch the angular app
+
+    ``` bash
+    npm start
+    ```
+
+2. Open the browser to http://localhost:4200
