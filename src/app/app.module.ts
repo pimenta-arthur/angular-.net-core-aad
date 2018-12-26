@@ -1,22 +1,44 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+
 
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DataService } from '../services/data.service';
+import { HomeComponent } from './home/home.component';
+import { ProfileComponent } from './profile/profile.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { Router } from './app.router';
+import { Adal5HTTPService, Adal5Service } from 'adal-angular5';
+import { LoggedInGuard } from './authentication/loggedInGuard';
 
-import { MatToolbarModule, MatButtonModule } from '@angular/material';
-import { AdalService } from 'adal-angular4';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    ProfileComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
-    MatToolbarModule, MatButtonModule
+    HttpClientModule,
+    Router,
+    MDBBootstrapModule.forRoot()
   ],
-  providers: [AdalService],
+  schemas: [ NO_ERRORS_SCHEMA ],
+  providers: [
+    DataService,
+    Adal5Service,
+    LoggedInGuard,
+    { 
+      provide: Adal5HTTPService, 
+      useFactory: Adal5HTTPService.factory, 
+      deps: [HttpClient, Adal5Service] 
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

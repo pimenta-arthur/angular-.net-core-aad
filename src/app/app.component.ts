@@ -1,21 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { AdalService } from 'adal-angular4';
-import { environment } from 'src/environments/environment';
+import { Adal5Service } from 'adal-angular5';
+import { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'MyApp';
-
-  constructor(private adalService: AdalService) {
-    this.adalService.init(environment.adalConfig);
+  constructor(private auth: Adal5Service) {
+    this.auth.init(environment.adalConfig);
   }
 
   ngOnInit() {
     // Handle callback if this is a redirect from Azure
-    this.adalService.handleWindowCallback();
+    this.auth.handleWindowCallback();
   }
 }

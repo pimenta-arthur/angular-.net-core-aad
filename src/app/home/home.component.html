@@ -1,0 +1,8 @@
+<div class="container">
+  <button type="button" class="btn btn-primary waves-light" mdbRippleRadius (click)="getCustomers()">Get Customers</button>
+  <button type="button" class="btn btn-default waves-light" mdbRippleRadius (click)="clearCustomers()">Clear Customers</button>
+  
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let customer of customers">{{ customer.firstName }} {{ customer.lastName }}</li>
+  </ul>
+</div>
