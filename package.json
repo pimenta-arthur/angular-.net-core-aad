@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "concurrently \"cd server && dotnet restore\" \"cd server && dotnet run\" \"ng serve -o\"",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
