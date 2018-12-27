@@ -43,12 +43,12 @@ Make sure you have installed all of the following prerequisites on your developm
 Update `appsettings.json` and set 
 ```
 "AzureAd": {
-    "Instance": "https://login.microsoftonline.com/",
-    "Domain": "YOUR DOMAIN",
-    "TenantId": "YOUR TENANT ID",
-    "ClientId": "YOUR CLIENT ID",
-    "ClientSecret": "YOUR CLIENT SECRET"
-  }
+  "Instance": "https://login.microsoftonline.com/",
+  "Domain": "YOUR DOMAIN",
+  "TenantId": "YOUR TENANT ID",
+  "ClientId": "YOUR CLIENT ID",
+  "ClientSecret": "YOUR CLIENT SECRET"
+}
 ```
 or alternatively set it in `user-secrets` [(Secret Manager) for the project](https://docs.microsoft.com/en-us/aspnet/core/security/app-secrets#secret-manage) 
 
