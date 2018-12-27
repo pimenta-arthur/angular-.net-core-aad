@@ -62,9 +62,9 @@ adalConfig: {
 ```
 
 ### Azure Portal
-Sign into portal.azure.com with an account that's an administrator on your tenant.
-Navigate to Azure Active Directory in the left side bar > App registrations > Your app > All settings > Reply URLS.
-Type the domain name where you're hosting your app (http://localhost:4200) and click Save.
+1. Sign into portal.azure.com with an account that's an administrator on your tenant.
+2. Navigate to Azure Active Directory in the left side bar > App registrations > Your app > All settings > Reply URLS.
+3. Type the domain name where you're hosting your app (http://localhost:4200) and click Save.
 
 ## Running the app
 
