@@ -2,7 +2,7 @@
 
 Angular 5 app for sign in and sign out with Azure AD and call protected WebAPI
 
-![angular net core azure ad](https://user-images.githubusercontent.com/17882425/50456229-28df8080-093a-11e9-8418-74594ae3f5dc.png)
+![angular net core azure ad](https://user-images.githubusercontent.com/17882425/50479338-3558ed00-09bd-11e9-93ac-9b3092cf5b21.png)
 
 ## Getting Started
 
