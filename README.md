@@ -7,7 +7,6 @@ Angular 5 app for sign in and sign out with Azure AD and call protected WebAPI
 ## Getting Started
 
 ### Requirements
-
 Make sure you have installed all of the following prerequisites on your development machine:
 
 1. Install [Node.js](https://nodejs.org/en/) and the npm package manager
@@ -37,8 +36,32 @@ Make sure you have installed all of the following prerequisites on your developm
     ```bash
     npm install
     ```
+    
+## Setup
 
-### Running the app
+### Server
+Update `appsettings.json` and set 
+```
+"AzureAd": {
+    "Instance": "https://login.microsoftonline.com/",
+    "Domain": "YOUR DOMAIN",
+    "TenantId": "YOUR TENANT ID",
+    "ClientId": "YOUR CLIENT ID",
+    "ClientSecret": "YOUR CLIENT SECRET"
+  }
+```
+or alternatively set it in `user-secrets` [(Secret Manager) for the project](https://docs.microsoft.com/en-us/aspnet/core/security/app-secrets#secret-manage) 
+
+### Client
+Update `environment.ts` and set
+```
+adalConfig: {
+  tenantId: 'YOUR TENANT ID',
+  clientId: 'YOUR CLIENT ID'
+}
+```
+
+## Running the app
 
 1. Build and launch the angular app
 
